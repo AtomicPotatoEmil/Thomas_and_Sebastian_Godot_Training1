@@ -42,3 +42,11 @@ func _process(delta):
 	get_input()
 	move_and_slide(VELOCITY)
 	pass
+
+
+
+
+func _on_hitbox_body_entered(body):
+	if body.is_in_group("smashable"):
+		body.smashed()
+	pass 
